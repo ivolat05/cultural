@@ -194,4 +194,22 @@ $(function () {
 
 		}
 	}
+
+	// изменение стилей header
+	function styleHeader() {
+		let headerBox = document.querySelector('.header');
+		let offsetHeader = headerBox.offsetHeight;
+		if (headerBox) {
+			window.addEventListener('scroll', () => {
+				let scrollDistanse = window.scrollY;
+				if (scrollDistanse > offsetHeader) {
+					headerBox.classList.add('header-color')
+				} else {
+					headerBox.classList.remove('header-color')
+				}
+			})
+		}
+	}
+
+	styleHeader();
 })
