@@ -190,6 +190,16 @@ $(function () {
 		prevArrow: $(".main__slick-prev"),
 	});
 
+	$(".library-slaider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: true,
+		arrows: true,
+		nextArrow: $(".library__slick-next"),
+		prevArrow: $(".library__slick-prev"),
+	});
+
 
 
 	// валидация
@@ -345,9 +355,11 @@ $(function () {
 	//  blockNumber - наименования класса числа
 	scrollNum(".info-title", '.scroll__number');
 	function scrollNum(blockStart, blockNumber) {
-		let show = true;
-		let countbox = blockStart;
-		if (countbox) {
+		let examination = document.querySelector(`${blockStart}`);
+
+		if (examination) {
+			let countbox = `${blockStart}`;
+			let show = true;
 			$(window).on("scroll load resize", function () {
 				if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
 				let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
@@ -367,4 +379,58 @@ $(function () {
 		}
 	}
 
+
+	// play audio
+	function playAudio() {
+		const player = document.querySelector('.player');
+		if (player) {
+			const playBtn = document.querySelector('.play');
+			const audio = document.querySelector('.audio');
+			const progressContainer = document.querySelector('.progress__container');
+			const progress = document.querySelector('.progress');
+			// начало проигрования
+			function playSong() {
+				player.classList.add('play');
+				playBtn.classList.add('--active');
+				audio.play();
+			}
+			// пастановка на паузу
+			function pauseSong() {
+				player.classList.remove('play');
+				playBtn.classList.remove('--active');
+				audio.pause();
+			}
+
+			// отоброжение полосы прогресса
+			function upDateProgress(event) {
+				let { duration, currentTime } = event.srcElement;
+				let progressProcent = (currentTime / duration) * 100;
+				progress.style.width = `${progressProcent}%`;
+			}
+
+			// прокрутка
+			function setProgress(event) {
+				let width = this.clientWidth;
+				let clickX = event.offsetX;
+				let duration = audio.duration;
+				audio.currentTime = (clickX / width) * duration;
+			}
+
+			audio.addEventListener('timeupdate', upDateProgress);
+
+			progressContainer.addEventListener('click', setProgress);
+
+			playBtn.addEventListener('click', () => {
+				if (!player.classList.contains('play')) {
+					playSong()
+				} else {
+					pauseSong()
+				}
+
+			})
+
+		}
+
+	}
+	playAudio();
 })
