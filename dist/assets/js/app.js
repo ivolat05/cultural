@@ -227,9 +227,10 @@ $(function () {
 				minlength: 3
 
 			},
-			phone: {
+			email: {
 				required: true,
-				minlenghtphone: true
+				minlength: 3,
+				email: true
 			},
 		},
 		errorPlacement: function (error, element) {
