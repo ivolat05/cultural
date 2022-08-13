@@ -144,6 +144,55 @@ $(function () {
 		duration: 1150,
 		once: true
 	});
+	// accordion
+	// button контейнер содержащий тело аккордиона
+	function accordionClick(button) {
+		let btnActive = document.querySelectorAll(`${button}`);
+		if (btnActive) {
+			btnActive.forEach(item => {
+				item.addEventListener('click', () => {
+					if (item.classList.contains('--active')) {
+						item.classList.remove('--active')
+						item.parentElement.parentElement.lastElementChild.style.maxHeight = null;
+					} else {
+						let panel = item.parentElement.parentElement.lastElementChild;
+						for (let i = 0; i < btnActive.length; i++) {
+							if (btnActive[i].classList.contains('--active')) {
+								btnActive[i].classList.remove('--active')
+								btnActive[i].parentElement.parentElement.lastElementChild.style.maxHeight = null;
+							}
+						}
+						item.classList.add('--active');
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+
+
+				})
+			})
+		}
+	}
+	accordionClick(".header-list-arrow")
+
+	// открытие поиска
+	function openSearc() {
+		let headerSearch = document.querySelector('.header-search');
+		let headerBoxSearch = document.querySelector('.header-box-search');
+		if (headerBoxSearch) {
+			headerSearch.addEventListener('click', () => {
+				if (headerSearch.classList.contains('active')) {
+					headerSearch.classList.remove('active');
+				} else {
+					headerSearch.classList.add('active');
+				}
+				if (headerBoxSearch.classList.contains('active')) {
+					headerBoxSearch.classList.remove('active');
+				} else {
+					headerBoxSearch.classList.add('active');
+				}
+			})
+		}
+	}
+	openSearc()
 
 	// popup
 

@@ -40,18 +40,20 @@
 							<img width="200" height="70" src="./assets/img/header/logo-end.svg" alt=""
 								class="logo-img logo-img-end">
 						</a>
-						<nav class="header-nav">
+						<nav class="header-nav  ">
 							<ul class="header-list">
 								<li class="header-list-inner">
 									<div class="header-list-box">
 										<a href="#" class="header-list-link" aria-label="О нас">
 											О нас
 										</a>
-										<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
-												stroke-width="2" />
-										</svg>
+										<button aria-label="открыть список" class="header-list-arrow">
+											<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
+													stroke-width="2" />
+											</svg>
+										</button>
 									</div>
 									<ul class="header-sublist">
 										<li class="header-sublist-inner">
@@ -113,11 +115,13 @@
 										<a href="#" class="header-list-link " aria-label="О городе">
 											О городе
 										</a>
-										<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
-												stroke-width="2" />
-										</svg>
+										<button aria-label="открыть список" class="header-list-arrow">
+											<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
+													stroke-width="2" />
+											</svg>
+										</button>
 									</div>
 									<ul class="header-sublist header-sublist-two">
 										<li class="header-sublist-inner">
@@ -174,11 +178,13 @@
 										<a href="#" class="header-list-link" aria-label="Туристическая инфраструктура">
 											Туристическая инфраструктура
 										</a>
-										<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
-												stroke-width="2" />
-										</svg>
+										<button aria-label="открыть список" class="header-list-arrow">
+											<svg class="header-svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path class="header-svg-path" d="M1 1.5L6 5.5L11 1.5" stroke="white"
+													stroke-width="2" />
+											</svg>
+										</button>
 									</div>
 									<ul class="header-sublist">
 										<li class="header-sublist-inner">
@@ -244,6 +250,14 @@
 									</div>
 								</li>
 							</ul>
+							<div class="header-box-search">
+								<div class="header-search-row">
+									<input type="text" class="header-input-search" placeholder="Поиск">
+									<button class="header-search-btn">
+										Поиск
+									</button>
+								</div>
+							</div>
 						</nav>
 		
 						<div class="header-coll ">
@@ -266,14 +280,27 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" aria-label="поиск" class="header-search">
-								<svg class="header-search-svg" width="19" height="19" viewBox="0 0 19 19" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
+							<button aria-label="поиск" class="header-search d-none d-lg-block">
+								<svg class="header-search-svg header-search-close" width="19" height="19" viewBox="0 0 19 19"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M8.27001 1C4.26151 1 1 4.26133 1 8.26962C1 12.2779 4.26151 15.5392 8.27001 15.5392C9.88302 15.5389 11.4495 14.9989 12.7202 14.0053L16.715 18L18 16.7151L14.0051 12.7204C14.9993 11.4498 15.5396 9.88296 15.54 8.26962C15.54 4.26133 12.2785 1 8.27001 1ZM8.27001 13.7218C5.26295 13.7218 2.8175 11.2765 2.8175 8.26962C2.8175 5.26272 5.26295 2.8174 8.27001 2.8174C11.2771 2.8174 13.7225 5.26272 13.7225 8.26962C13.7225 11.2765 11.2771 13.7218 8.27001 13.7218Z"
 										fill="white" />
 								</svg>
-							</a>
+								<svg class="header-search-svg  header-search-open" version="1.1" id="Capa_1"
+									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+									y="0px" width="19" height="19" viewBox="0 0 94.926 94.926"
+									style="enable-background:new 0 0 94.926 94.926;" xml:space="preserve">
+									<g>
+										<path fill="white" d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
+				c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096
+				c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476
+				c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
+				s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z" />
+									</g>
+								</svg>
+		
+							</button>
 							<a href="#" aria-label="телеграмм" class="header-mess">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
@@ -299,7 +326,7 @@
 				</div>
 			</div>
 		</header>
-		<!--
+	
 		<main class="main position-relative">
 			<div class=" main-slaider">
 				<div class="main-box ">
@@ -392,7 +419,7 @@
 				</button>
 			</div>
 		</main>
-	
+		<!--
 		<section class="info info-padding">
 			<div class="container">
 				<div class="info-wrapp">
@@ -670,159 +697,161 @@
 				</div>
 			</div>
 		</section>
+	
+	
 		<footer class="footer">
-		<div class="container">
-			<div class="footer-wrapp d-flex justify-content-between align-items-start">
-				<div class="footer-contact">
-					<h3 class="footer-title">
-						Наши контакты
-					</h3>
-					<a href="#" aria-label="https://t.me/qrmaykop" target="_blank" class="footer-contact-link">
-						<svg class="footer-contact-svg" width="30" height="22" viewBox="0 0 30 22" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M25.8312 0.646269L3.66875 9.19252C2.15625 9.80002 2.165 10.6438 3.39125 11.02L9.08125 12.795L22.2462 4.48877C22.8687 4.11002 23.4375 4.31377 22.97 4.72877L12.3037 14.355H12.3012L12.3037 14.3563L11.9112 20.2213C12.4862 20.2213 12.74 19.9575 13.0625 19.6463L15.8262 16.9588L21.575 21.205C22.635 21.7888 23.3962 21.4888 23.66 20.2238L27.4337 2.43877C27.82 0.890019 26.8425 0.188769 25.8312 0.646269Z"
-								fill="white" />
-						</svg>
-						t.me/qrmaykop
-					</a>
-					<a href="https://vk.com/qrmaykop" target="_blank" aria-label="vk.com/qrmaykop"
-						class="footer-contact-link">
-						<svg class="footer-contact-svg" width="30" height="18" viewBox="0 0 30 18" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M29.3125 1.185C29.52 0.5025 29.3125 0 28.3188 0H25.0375C24.2025 0 23.8175 0.43375 23.6088 0.9125C23.6088 0.9125 21.94 4.9075 19.5763 7.5025C18.8113 8.255 18.4638 8.49375 18.0463 8.49375C17.8375 8.49375 17.5238 8.255 17.5238 7.57125V1.185C17.5238 0.365 17.2938 0 16.5988 0H11.4388C10.9175 0 10.6038 0.38 10.6038 0.74125C10.6038 1.5175 11.7863 1.6975 11.9075 3.8825V8.63C11.9075 9.67125 11.7163 9.86 11.2988 9.86C10.1863 9.86 7.48 5.84625 5.87375 1.25375C5.5625 0.36 5.2475 0 4.40875 0H1.125C0.1875 0 0 0.43375 0 0.9125C0 1.765 1.1125 6 5.18125 11.6012C7.89375 15.4263 11.7125 17.5 15.1913 17.5C17.2775 17.5 17.535 17.04 17.535 16.2463V13.355C17.535 12.4338 17.7325 12.25 18.3938 12.25C18.8813 12.25 19.715 12.49 21.6625 14.3337C23.8875 16.52 24.2538 17.5 25.5063 17.5H28.7875C29.725 17.5 30.195 17.04 29.925 16.13C29.6275 15.225 28.565 13.9113 27.1563 12.3525C26.3913 11.465 25.2438 10.5087 24.895 10.03C24.4088 9.41625 24.5475 9.1425 24.895 8.59625C24.895 8.59625 28.895 3.06375 29.3113 1.185H29.3125Z"
-								fill="white" />
-						</svg>
-	
-						vk.com/qrmaykop
-					</a>
-					<a href="mailto:stashdana@gmail.com" target="_blank" aria-label="stashdana@gmail.com"
-						class="footer-contact-link">
-						<svg class="footer-contact-svg" width="22" height="18" viewBox="0 0 22 18" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path d="M21.1562 1.09375H0.84375L11 10.0312L21.1562 1.09375Z" fill="white" />
-							<path
-								d="M0.84375 1.09375H21.1562M0.84375 1.09375V16.5312H21.1562V1.09375M0.84375 1.09375L11 10.0312L21.1562 1.09375"
-								stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-	
-						stashdana@gmail.com
-					</a>
-					<a href="tel:79880837808" target="_blank" aria-label="+7 (988) 083-78-08" class="footer-contact-link">
-						<svg class="footer-contact-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M13.0075 14.11L14.6875 12.43C14.9138 12.2066 15.2 12.0536 15.5116 11.9897C15.8231 11.9258 16.1465 11.9537 16.4425 12.07L18.49 12.8875C18.7891 13.0089 19.0456 13.2162 19.2271 13.4831C19.4086 13.75 19.507 14.0647 19.51 14.3875V18.1375C19.5082 18.3571 19.4621 18.5741 19.3743 18.7753C19.2865 18.9766 19.1589 19.158 18.9991 19.3087C18.8393 19.4594 18.6507 19.5761 18.4447 19.652C18.2386 19.7278 18.0193 19.7612 17.8 19.75C3.45249 18.8575 0.557488 6.70753 0.0099881 2.05753C-0.0154272 1.82918 0.00779408 1.59804 0.0781242 1.37931C0.148454 1.16058 0.264299 0.959225 0.418038 0.788483C0.571777 0.61774 0.759926 0.481484 0.970106 0.388679C1.18029 0.295873 1.40773 0.248621 1.63749 0.250031H5.25999C5.58324 0.250987 5.89882 0.348631 6.16613 0.530403C6.43344 0.712174 6.64026 0.96976 6.75999 1.27003L7.57749 3.31753C7.69768 3.61233 7.72834 3.93601 7.66565 4.24814C7.60296 4.56027 7.44969 4.847 7.22499 5.07253L5.54499 6.75253C5.54499 6.75253 6.51249 13.3 13.0075 14.11Z"
-								fill="white" />
-						</svg>
-	
-						+7 (988) 083-78-08
-					</a>
-				</div>
-	
-				<nav class="footer-nav  d-flex justify-content-between align-items-start">
-					<ul class="footer-list">
-						<li class="footer-list-inner">
-							<a href="#" aria-label="О нас" class="footer-list-title">
-								О нас
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="О проекте" class="footer-list-link">
-								О проекте
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="О команде" class="footer-list-link">
-								О команде
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Партнеры проекта" class="footer-list-link">
-								Партнеры проекта
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Контакты" class="footer-list-link">
-								Контакты
-							</a>
-						</li>
-					</ul>
-					<ul class="footer-list">
-						<li class="footer-list-inner">
-							<a href="#" aria-label="О городе" class="footer-list-title">
-								О городе
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="История Майкопа" class="footer-list-link">
-								История Майкопа
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Достопримечательности" class="footer-list-link">
-								Достопримечательности
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Карта города" class="footer-list-link">
-								Карта города
-							</a>
-						</li>
-					</ul>
-					<ul class="footer-list">
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Туристическая инфраструктура" class="footer-list-title">
-								Туристическая инфраструктура
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Проживание" class="footer-list-link">
-								Проживание
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Питание" class="footer-list-link">
-								Питание
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Сувенирные магазины" class="footer-list-link">
-								Сувенирные магазины
-							</a>
-						</li>
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Экскурсии по городу" class="footer-list-link">
-								Экскурсии по городу
-							</a>
-						</li>
-					</ul>
-					<ul class="footer-list">
-						<li class="footer-list-inner">
-							<a href="#" aria-label="Фото-галерея" class="footer-list-title">
-								Фото-галерея
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="footer-coll">
-					<a href="#" aria-label="культура qr майкопа" class="footer-coll-link">
-						<img width="190" height="70" src="./assets/img/footer/footer-1.png" alt="" class="footer-coll-img">
-					</a>
-					<a href="#" aria-label="адыгейский государственный университет" class="footer-coll-link">
-						<img width="304" height="38" src="./assets/img/footer/footer-2.png" alt="" class="footer-coll-img">
-					</a>
-					<a href="#" aria-label="физическое лицо" class="footer-coll-link">
-						<img width="80" height="80" src="./assets/img/footer/footer-3.png" alt="" class="footer-coll-img">
-					</a>
-					<a href="#" aria-label="росмолодёж гранты" class="footer-coll-link --fix">
-						<img width="175" height="55" src="./assets/img/footer/footer-4.png" alt="" class="footer-coll-img">
-					</a>
+			<div class="container">
+				<div class="footer-wrapp d-flex justify-content-between align-items-start">
+					<div class="footer-contact">
+						<h3 class="footer-title">
+							Наши контакты
+						</h3>
+						<a href="#" aria-label="https://t.me/qrmaykop" target="_blank" class="footer-contact-link">
+							<svg class="footer-contact-svg" width="30" height="22" viewBox="0 0 30 22" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.8312 0.646269L3.66875 9.19252C2.15625 9.80002 2.165 10.6438 3.39125 11.02L9.08125 12.795L22.2462 4.48877C22.8687 4.11002 23.4375 4.31377 22.97 4.72877L12.3037 14.355H12.3012L12.3037 14.3563L11.9112 20.2213C12.4862 20.2213 12.74 19.9575 13.0625 19.6463L15.8262 16.9588L21.575 21.205C22.635 21.7888 23.3962 21.4888 23.66 20.2238L27.4337 2.43877C27.82 0.890019 26.8425 0.188769 25.8312 0.646269Z"
+									fill="white" />
+							</svg>
+							t.me/qrmaykop
+						</a>
+						<a href="https://vk.com/qrmaykop" target="_blank" aria-label="vk.com/qrmaykop"
+							class="footer-contact-link">
+							<svg class="footer-contact-svg" width="30" height="18" viewBox="0 0 30 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M29.3125 1.185C29.52 0.5025 29.3125 0 28.3188 0H25.0375C24.2025 0 23.8175 0.43375 23.6088 0.9125C23.6088 0.9125 21.94 4.9075 19.5763 7.5025C18.8113 8.255 18.4638 8.49375 18.0463 8.49375C17.8375 8.49375 17.5238 8.255 17.5238 7.57125V1.185C17.5238 0.365 17.2938 0 16.5988 0H11.4388C10.9175 0 10.6038 0.38 10.6038 0.74125C10.6038 1.5175 11.7863 1.6975 11.9075 3.8825V8.63C11.9075 9.67125 11.7163 9.86 11.2988 9.86C10.1863 9.86 7.48 5.84625 5.87375 1.25375C5.5625 0.36 5.2475 0 4.40875 0H1.125C0.1875 0 0 0.43375 0 0.9125C0 1.765 1.1125 6 5.18125 11.6012C7.89375 15.4263 11.7125 17.5 15.1913 17.5C17.2775 17.5 17.535 17.04 17.535 16.2463V13.355C17.535 12.4338 17.7325 12.25 18.3938 12.25C18.8813 12.25 19.715 12.49 21.6625 14.3337C23.8875 16.52 24.2538 17.5 25.5063 17.5H28.7875C29.725 17.5 30.195 17.04 29.925 16.13C29.6275 15.225 28.565 13.9113 27.1563 12.3525C26.3913 11.465 25.2438 10.5087 24.895 10.03C24.4088 9.41625 24.5475 9.1425 24.895 8.59625C24.895 8.59625 28.895 3.06375 29.3113 1.185H29.3125Z"
+									fill="white" />
+							</svg>
+		
+							vk.com/qrmaykop
+						</a>
+						<a href="mailto:stashdana@gmail.com" target="_blank" aria-label="stashdana@gmail.com"
+							class="footer-contact-link">
+							<svg class="footer-contact-svg" width="22" height="18" viewBox="0 0 22 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.1562 1.09375H0.84375L11 10.0312L21.1562 1.09375Z" fill="white" />
+								<path
+									d="M0.84375 1.09375H21.1562M0.84375 1.09375V16.5312H21.1562V1.09375M0.84375 1.09375L11 10.0312L21.1562 1.09375"
+									stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+		
+							stashdana@gmail.com
+						</a>
+						<a href="tel:79880837808" target="_blank" aria-label="+7 (988) 083-78-08" class="footer-contact-link">
+							<svg class="footer-contact-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M13.0075 14.11L14.6875 12.43C14.9138 12.2066 15.2 12.0536 15.5116 11.9897C15.8231 11.9258 16.1465 11.9537 16.4425 12.07L18.49 12.8875C18.7891 13.0089 19.0456 13.2162 19.2271 13.4831C19.4086 13.75 19.507 14.0647 19.51 14.3875V18.1375C19.5082 18.3571 19.4621 18.5741 19.3743 18.7753C19.2865 18.9766 19.1589 19.158 18.9991 19.3087C18.8393 19.4594 18.6507 19.5761 18.4447 19.652C18.2386 19.7278 18.0193 19.7612 17.8 19.75C3.45249 18.8575 0.557488 6.70753 0.0099881 2.05753C-0.0154272 1.82918 0.00779408 1.59804 0.0781242 1.37931C0.148454 1.16058 0.264299 0.959225 0.418038 0.788483C0.571777 0.61774 0.759926 0.481484 0.970106 0.388679C1.18029 0.295873 1.40773 0.248621 1.63749 0.250031H5.25999C5.58324 0.250987 5.89882 0.348631 6.16613 0.530403C6.43344 0.712174 6.64026 0.96976 6.75999 1.27003L7.57749 3.31753C7.69768 3.61233 7.72834 3.93601 7.66565 4.24814C7.60296 4.56027 7.44969 4.847 7.22499 5.07253L5.54499 6.75253C5.54499 6.75253 6.51249 13.3 13.0075 14.11Z"
+									fill="white" />
+							</svg>
+		
+							+7 (988) 083-78-08
+						</a>
+					</div>
+		
+					<nav class="footer-nav  d-flex justify-content-between align-items-start">
+						<ul class="footer-list">
+							<li class="footer-list-inner">
+								<a href="#" aria-label="О нас" class="footer-list-title">
+									О нас
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="О проекте" class="footer-list-link">
+									О проекте
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="О команде" class="footer-list-link">
+									О команде
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Партнеры проекта" class="footer-list-link">
+									Партнеры проекта
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Контакты" class="footer-list-link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						<ul class="footer-list">
+							<li class="footer-list-inner">
+								<a href="#" aria-label="О городе" class="footer-list-title">
+									О городе
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="История Майкопа" class="footer-list-link">
+									История Майкопа
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Достопримечательности" class="footer-list-link">
+									Достопримечательности
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Карта города" class="footer-list-link">
+									Карта города
+								</a>
+							</li>
+						</ul>
+						<ul class="footer-list">
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Туристическая инфраструктура" class="footer-list-title">
+									Туристическая инфраструктура
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Проживание" class="footer-list-link">
+									Проживание
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Питание" class="footer-list-link">
+									Питание
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Сувенирные магазины" class="footer-list-link">
+									Сувенирные магазины
+								</a>
+							</li>
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Экскурсии по городу" class="footer-list-link">
+									Экскурсии по городу
+								</a>
+							</li>
+						</ul>
+						<ul class="footer-list">
+							<li class="footer-list-inner">
+								<a href="#" aria-label="Фото-галерея" class="footer-list-title">
+									Фото-галерея
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer-coll">
+						<a href="#" aria-label="культура qr майкопа" class="footer-coll-link">
+							<img width="190" height="70" src="./assets/img/footer/footer-1.png" alt="" class="footer-coll-img">
+						</a>
+						<a href="#" aria-label="адыгейский государственный университет" class="footer-coll-link">
+							<img width="304" height="38" src="./assets/img/footer/footer-2.png" alt="" class="footer-coll-img">
+						</a>
+						<a href="#" aria-label="физическое лицо" class="footer-coll-link">
+							<img width="80" height="80" src="./assets/img/footer/footer-3.png" alt="" class="footer-coll-img">
+						</a>
+						<a href="#" aria-label="росмолодёж гранты" class="footer-coll-link --fix">
+							<img width="175" height="55" src="./assets/img/footer/footer-4.png" alt="" class="footer-coll-img">
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 	-->
 	</div>
 	
