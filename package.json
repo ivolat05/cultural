@@ -23,6 +23,8 @@
     },
     "dependencies": {
         "bootstrap": "^5.1.0",
+        "imagemin-jpeg-recompress": "^7.0.0",
+        "imagemin-pngquant": "^9.0.2",
         "slick-carousel": "^1.8.1"
     }
 }

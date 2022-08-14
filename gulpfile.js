@@ -10,6 +10,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const cssnano = require("gulp-cssnano");
 const imagemin = require("gulp-imagemin");
+const jpegrecompress = require('imagemin-jpeg-recompress'); // плагин для сжатия jpeg
+const pngquant = require('imagemin-pngquant'); // плагин для сжатия png
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const rigger = require("gulp-rigger");
@@ -130,7 +132,18 @@ function js() {
 
 function images() {
 	return src(path.src.images)
-		.pipe(imagemin())
+		.pipe(imagemin(
+			[ // сжатие изображений
+				imagemin.gifsicle({ interlaced: true }),
+				jpegrecompress({
+					progressive: true,
+					max: 95,
+					min: 90
+				}),
+				pngquant(),
+				imagemin.svgo({ plugins: [{ removeViewBox: false }] })
+			]
+		))
 		.pipe(dest(path.build.images));
 }
 
